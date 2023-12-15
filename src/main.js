@@ -1,6 +1,10 @@
-import './assets/main.css'
+import { createApp } from "vue";
+import Toast from "vue-toastification";
+import "vue-toastification/dist/index.css";
+import "./assets/main.css";
+import App from "./App.vue";
 
-import { createApp } from 'vue'
-import App from './App.vue'
+const app = createApp(App);
 
-createApp(App).mount('#app')
+app.use(Toast);
+app.mount("#app");
